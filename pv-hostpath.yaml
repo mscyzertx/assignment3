@@ -11,4 +11,4 @@ spec:
   storageClassName: localstorage
   persistentVolumeReclaimPolicy: Retain
   hostPath:
-    path: /tmp/mongodb
+    path: /tmp/mysql
