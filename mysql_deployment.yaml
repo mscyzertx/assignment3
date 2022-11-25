@@ -2,19 +2,20 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: e-mysql
-  namespace: lab3
+  labels:
+    app: mysql
 spec:
   replicas: 1 
   selector:
     matchLabels:
-      name: mysql
+      app: mysql
   template:
     metadata:
       labels:
-        name: mysql
+        app: mysql
     spec:
       containers:
-      - image: '670435616773.dkr.ecr.us-east-1.amazonaws.com/assignment2-mysql:v1.0'
+      - image: '670435616773.dkr.ecr.us-east-1.amazonaws.com/assignment2-mysql:v2.0'
         name: mysql
         env:
         - name: MYSQL_ROOT_PASSWORD
