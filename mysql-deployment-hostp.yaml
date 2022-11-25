@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: e-mysql
+  name: e-mysql-hostpath
   labels:
     app: mysql
 spec:
@@ -29,4 +29,3 @@ spec:
       volumes:
       - name: mysql-database-hostpath
         persistentVolumeClaim: 
-          claimName: mysql-pvc-hostpath
